@@ -1,11 +1,50 @@
 body{
 width: 90vw;
+margin: 0 auto;
 background: url(/Asset/Img/Font\ de\ site.jpg);
 }
 
 #titreHeader {
     text-align: center;
 }
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nomDesJoueurs{
+    margin: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#btnValidation{
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    background-color: #8E58A3;
+}
+
+#partie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vw;
+}
+
+#tableauScore{
+    display: flex;
+    flex-direction: row;
+    margin: 0 1vw;
+}
+#faceDeDes{
+    width: 15vw;
+}
+
 @media (width < 750px) {
 
 }

@@ -15,18 +15,55 @@
         </header>
 
         <main>
-            <form action="name">
-                <table>
-                    <tr>
+            <form action="nomJoueur">
+                <table id="nomDesJoueurs">
+                    <tr id="joueurUn">
                         <td>
-                            <label id="playerOne" for="name">Player </label>
+                            <label for="name">Joueur 1 :</label>
                         </td>
                         <td>
-                            <input type="name" placeholder="Saisissez votre Pseudo">
+                            <input id="champJoueurUn" type="name" name="joueur un" placeholder="Saisissez votre Pseudo">
+                        </td>
+                    </tr>
+                    <tr id="joueurDeux">
+                        <td>
+                            <label for="name">Joueur 2 :</label>
+                        </td>
+                        <td>
+                            <input id="champJoueurDeux" type="name" name="joueur deux" placeholder="Saisissez votre Pseudo">
                         </td>
                     </tr>
                 </table>
+                <button id="btnValidation">Validation</button>
             </form>
+            <section id="partie">
+                <article>
+                    <button id="debutDePartie">Debut de partie</button>
+                </article>
+                <article id="tableauScore">
+                    <table class="score">
+                        <tr>
+                            <td id="nomJoueurUn">Joueur 1</td>
+                        </tr>
+                        <tr>
+                            <td id="scoreJoueurUn">Score</td>
+                        </tr>
+                    </table>
+                    <div id="Des">
+                        <img id="faceDeDes" src="/Asset/Img/face 1.jpg" alt="face de dés">
+                        <button id="lancerDeDes">Lancer de dés</button>
+                    </div>
+                    <table class="score">
+                        <tr>
+                            <td id="nomJoueurDeux">Joueur 2</td>
+                        </tr>
+                        <tr>
+                            <td id="scoreJoueurDeux">Score</td>
+                        </tr>
+                    </table>
+                </article>
+                
+            </section>
         </main>
 
         <footer>
