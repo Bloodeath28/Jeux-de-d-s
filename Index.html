@@ -22,7 +22,7 @@
                             <label for="name">Joueur 1 :</label>
                         </td>
                         <td>
-                            <input id="champJoueurUn" type="name" name="joueur un" placeholder="Saisissez votre Pseudo">
+                            <input id="champJoueurUn" type="pseudo" name="joueur un" placeholder="Saisissez votre Pseudo">
                         </td>
                     </tr>
                     <tr id="joueurDeux">
@@ -30,7 +30,7 @@
                             <label for="name">Joueur 2 :</label>
                         </td>
                         <td>
-                            <input id="champJoueurDeux" type="name" name="joueur deux" placeholder="Saisissez votre Pseudo">
+                            <input id="champJoueurDeux" type="pseudo" name="joueur deux" placeholder="Saisissez votre Pseudo">
                         </td>
                     </tr>
                 </table>
@@ -40,27 +40,49 @@
                 <article>
                     <button id="debutDePartie">Debut de partie</button>
                 </article>
-                <article id="tableauScore">
-                    <table class="score">
-                        <tr>
-                            <td id="nomJoueurUn">Joueur 1</td>
-                        </tr>
-                        <tr>
-                            <td id="scoreJoueurUn">Score</td>
-                        </tr>
-                    </table>
-                    <div id="Des">
+                <article id="tableDeJeux">
+                    <div id="tableauJoueurUn">
+                        <table class="score">
+                            <tr>
+                                <td class="titreTableau">Nom du joueur</td>
+                                <td id="nomJoueurUn">Joueur 1</td>
+                            </tr>
+                            <tr>
+                                <td class="titreTableau">Resultat</td>
+                                <td id="scoreJoueurUn">0</td>
+                            </tr>
+                        </table>
+                        <button id="sauvePointJoueurUn">Sauver les points</button>
+                        <table class="score">
+                            <tr>
+                                <td class="titreTableau">Score</td>
+                                <td id="scoreSauveJoueurUn">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="des">
                         <img id="faceDeDes" src="/Asset/Img/face 1.jpg" alt="face de dés">
                         <button id="lancerDeDes">Lancer de dés</button>
                     </div>
-                    <table class="score">
-                        <tr>
-                            <td id="nomJoueurDeux">Joueur 2</td>
-                        </tr>
-                        <tr>
-                            <td id="scoreJoueurDeux">Score</td>
-                        </tr>
-                    </table>
+                    <div id="tableauJoueurDeux">
+                        <table class="score">
+                            <tr>
+                                <td id="nomJoueurDeux">Joueur 2</td>
+                                <td class="titreTableauDeux">Nom du joueur</td>
+                            </tr>
+                            <tr>
+                                <td id="scoreJoueurDeux">0</td>
+                                <td class="titreTableauDeux">Resultat</td>
+                            </tr>
+                        </table>
+                        <button id="sauvePointJoueurdeux">Sauver les points</button>
+                        <table class="score">
+                            <tr>
+                                <td id="scoreSauveJoueurDeux">0</td>
+                                <td class="titreTableauDeux">Score</td>
+                            </tr>
+                        </table>
+                    </div>
                 </article>
                 
             </section>

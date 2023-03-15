@@ -1,7 +1,9 @@
 body{
 width: 90vw;
 margin: 0 auto;
-background: url(/Asset/Img/Font\ de\ site.jpg);
+background: url(/Asset/Img/Table\ de\ jeux.jpg);
+background-repeat: no-repeat;
+color: white;
 }
 
 #titreHeader {
@@ -25,26 +27,90 @@ form{
     width: 100px;
     height: 40px;
     border: none;
+    color: rgb(0, 0, 0);
     border-radius: 25px;
-    background-color: #8E58A3;
+    background-color: #20d43893;
+    cursor: pointer;
 }
 
+#btnValidation:active{
+    background-color: #6cd3727c;
+
+}
 #partie{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3vw;
+    margin-top: 5vw;
 }
 
-#tableauScore{
+#debutDePartie{
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(28, 14, 153, 0.836);
+    cursor: pointer;
+    margin-bottom: 2.5vw;
+}
+
+#debutDePartie:active{
+    background-color: rgba(65, 54, 167, 0.836);
+}
+
+#tableDeJeux{
     display: flex;
+    width: 100%;
     flex-direction: row;
     margin: 0 1vw;
+    justify-content: space-between;
 }
-#faceDeDes{
-    width: 15vw;
+#tableauJoueurUn, #tableauJoueurDeux{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media (width < 750px) {
+.score{
+    background-color: rgba(128, 128, 128, 0.527);
+    border: dashed 1.5px rgb(255, 255, 255);
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+}
 
+.score, td{
+    width: 160px;
+}
+.titreTableau{
+    width: 75px;
+    border-right: dashed 1.5px rgb(255, 255, 255);
+}
+
+.titreTableauDeux{
+    width: 75px;
+    border-left: dashed 1.5px rgb(255, 255, 255);
+}
+
+#sauvePointJoueurUn, #sauvePointJoueurdeux {
+    margin: 1vw 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #20d43893;
+    font-weight: bold;
+    height: 40px;
+}
+
+#sauvePointJoueurUn:active, #sauvePointJoueurdeux:active{
+    background-color: #6cd3727c;
+}
+
+#des{
+    display: flex;
+    flex-direction: column;
+    margin: 0 1vw;
+    width: 10vw;
 }
