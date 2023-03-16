@@ -2,9 +2,10 @@ body{
 width: 90vw;
 margin: 0 auto;
 background: url(/Asset/Img/Table\ de\ jeux.jpg);
-background-repeat: no-repeat;
+background-size: cover;
 color: white;
 }
+
 
 #titreHeader {
     text-align: center;
@@ -45,6 +46,12 @@ form{
 }
 
 #debutDePartie{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#btnDebutDePartie{
     width: 150px;
     height: 45px;
     font-size: 16px;
@@ -54,10 +61,11 @@ form{
     border-radius: 15px;
     background-color: rgba(28, 14, 153, 0.836);
     cursor: pointer;
-    margin-bottom: 2.5vw;
+    margin-bottom: 0.5vw;
 }
 
-#debutDePartie:active{
+
+#btnDebutDePartie:active{
     background-color: rgba(65, 54, 167, 0.836);
 }
 
@@ -113,4 +121,15 @@ form{
     flex-direction: column;
     margin: 0 1vw;
     width: 10vw;
+}
+
+#des img:not(#faceDeDes){
+    display: none;
+}
+
+#message{
+    background-color: green;
+    width: 175px;
+    height: 70px;
+    margin: 0.5vw;
 }
