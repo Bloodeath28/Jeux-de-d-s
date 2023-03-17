@@ -16,13 +16,20 @@ const desQuatre = document.getElementById('faceDeDesQuatre');
 const desCinq = document.getElementById('faceDeDesCinq');
 const desSix = document.getElementById('faceDeDesSix');
 const messageGameOver = document.getElementById('messageGameOver');
+const btnSauverPointUn = document.getElementById('btnSauvePointJoueurUn');
+const btnSauverPointDeux = document.getElementById('btnSauvePointJoueurdeux');
 
-let resultat = "";
+let resultat = 0;
 let joueurCourant = "";
 let userName1 = "";
 let userName2 = "";
 let compteur = 0 ;
-
+let resulatJoueurUn = document.getElementById('resultatJoueurUn');
+let resulatJoueurDeux = document.getElementById('resultatJoueurDeux');
+let scoreJoueurUn = document.getElementById('scoreSauveJoueurUn');
+let scoreJoueurDeux = document.getElementById('scoreSauveJoueurDeux');
+let stockagePoint = 0;
+let stockageScore = 0;
 
 bouttonValider.addEventListener("click", Event => {
     userName1 = nomJoueurUn.value;
@@ -66,69 +73,59 @@ btnDebutPartie.addEventListener("click", Event => {
 });
 
 btnLancer.addEventListener("click",lancer);
+
+btnSauverPointUn.addEventListener("click");
+console.log("click point")
+// Créer une function de stockage de score
+
 //fonction de lancer de dés
 function lancer(){
     resultat = aleatoire(1, 6)
     console.log(resultat);
+    stockagePoint += resultat;
+    stockageScore += resulatJoueurUn
+
+    desZero.style.display = "none";
+    desUn.style.display = "none";
+    desDeux.style.display = "none";
+    desTrois.style.display = "none";
+    desQuatre.style.display = "none";
+    desCinq.style.display = "none";
+    desSix.style.display = "none";
     
     switch (resultat) {
         case 1 :
-            messageGameOver.textContent = " Pas de chance ! Ahahaha !";
-            messageGameOver.style.backgroundColor = "red";
-            messageGameOver.style.color = "black";
-            desZero.style.display = "none";
             desUn.style.display = "block";
-            desDeux.style.display = "none";
-            desTrois.style.display = "none";
-            desQuatre.style.display = "none";
-            desCinq.style.display = "none";
-            desSix.style.display = "none";
             break;
         case 2 :
-            desZero.style.display = "none";
-            desUn.style.display = "none";
             desDeux.style.display = "block";
-            desTrois.style.display = "none";
-            desQuatre.style.display = "none";
-            desCinq.style.display = "none";
-            desSix.style.display = "none";
             break;
         case 3 :
-            desZero.style.display = "none";
-            desUn.style.display = "none";
-            desDeux.style.display = "none";
             desTrois.style.display = "block";
-            desQuatre.style.display = "none";
-            desCinq.style.display = "none";
-            desSix.style.display = "none";
             break;
         case 4 :
-            desZero.style.display = "none";
-            desUn.style.display = "none";
-            desDeux.style.display = "none";
-            desTrois.style.display = "none";
             desQuatre.style.display = "block";
-            desCinq.style.display = "none";
-            desSix.style.display = "none";
             break;
         case 5 :
-            desZero.style.display = "none";
-            desUn.style.display = "none";
-            desDeux.style.display = "none";
-            desTrois.style.display = "none";
-            desQuatre.style.display = "none";
             desCinq.style.display = "block";
-            desSix.style.display = "none";
             break;
         case 6 :
-            desZero.style.display = "none";
-            desUn.style.display = "none";
-            desDeux.style.display = "none";
-            desTrois.style.display = "none";
-            desQuatre.style.display = "none";
-            desCinq.style.display = "none";
             desSix.style.display = "block";
             break;
+        default:
     }
-    if ()
+    if (joueurCourant === 1 && resultat === 1) {
+        messageGameOver.textContent = " Pas de chance ! Ahahaha !";
+        messageGameOver.style.backgroundColor = "red";
+        messageGameOver.style.color = "black";
+        joueurCourant = 2
+    }
+    else if (resultat >= 2) {
+        resulatJoueurUn.innerHTML = stockagePoint;
+        console.log(resulatJoueurUn)
+    }
+    else if (btnSauverPointUn.addEventListener("click")) {
+        scoreJoueurUn.innerHTML = stockageScore;
+        console.log(scoreJoueurUn)
+    }
 }

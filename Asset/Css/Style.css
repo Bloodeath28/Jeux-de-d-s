@@ -103,7 +103,7 @@ align-items: center;
     border-left: dashed 1.5px rgb(255, 255, 255);
 }
 
-#sauvePointJoueurUn, #sauvePointJoueurdeux {
+#btnSauvePointJoueurUn, #btnSauvePointJoueurdeux {
     margin: 1vw 0;
     border: none;
     border-radius: 10px;
@@ -112,7 +112,7 @@ align-items: center;
     height: 40px;
 }
 
-#sauvePointJoueurUn:active, #sauvePointJoueurdeux:active{
+#btnSauvePointJoueurUn:active, #btnSauvePointJoueurdeux:active{
     background-color: #6cd3727c;
 }
 
